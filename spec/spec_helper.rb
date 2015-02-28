@@ -28,6 +28,7 @@ Spork.prefork do
     # examples within a transaction, comment the following line or assign false
     # instead of true.
     config.use_transactional_fixtures = true
+    config.include Capybara::DSL
 
     def test_sign_in(user)
       controller.sign_in(user)
